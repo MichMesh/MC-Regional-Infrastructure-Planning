@@ -1,0 +1,85 @@
+{
+  "_about": "Local regions beneath the Michigan subregions (RFC-001). One entry per tag. status: \"in-use\" means repeaters carry it today; \"proposed\" means named in an RFC but not settled; \"example\" means an illustration in RFC-001, not a region anyone should carry yet. suggestedCounties are where a repeater most likely serves the area. They are a default for tools, not a boundary: a repeater carries the regions of the coverage it actually serves. See data/README.md.",
+  "regions": [
+    {
+      "tag": "grr",
+      "name": "Grand Rapids",
+      "subregion": "mi-west",
+      "status": "in-use",
+      "suggestedCounties": [
+        "Kent"
+      ],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "azo",
+      "name": "Kalamazoo",
+      "subregion": "mi-west",
+      "status": "in-use",
+      "suggestedCounties": [
+        "Kalamazoo"
+      ],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "mkg",
+      "name": "Muskegon",
+      "subregion": "mi-west",
+      "status": "example",
+      "suggestedCounties": [
+        "Muskegon"
+      ],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "thumb",
+      "name": "The Thumb",
+      "subregion": "mi-central",
+      "status": "proposed",
+      "suggestedCounties": [
+        "Huron",
+        "Sanilac",
+        "Tuscola"
+      ],
+      "source": "RFC-001; counties from Addendum A Part 2"
+    },
+    {
+      "tag": "midstate",
+      "name": "Midstate",
+      "subregion": "mi-central",
+      "status": "proposed",
+      "suggestedCounties": [],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "det",
+      "name": "Detroit",
+      "subregion": "mi-east",
+      "status": "example",
+      "suggestedCounties": [
+        "Wayne"
+      ],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "tvc",
+      "name": "Traverse City",
+      "subregion": "mi-north",
+      "status": "example",
+      "suggestedCounties": [
+        "Grand Traverse"
+      ],
+      "source": "RFC-001"
+    },
+    {
+      "tag": "mqt",
+      "name": "Marquette",
+      "subregion": "mi-upper",
+      "status": "example",
+      "suggestedCounties": [
+        "Marquette"
+      ],
+      "source": "RFC-001"
+    }
+  ]
+}

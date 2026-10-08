@@ -9,6 +9,12 @@ The draft treats regions as RF propagation and community domains, not political 
 - [RFC-001: Michigan MeshCore Regions](rfc/0001-michigan-regions.md) — Draft
 - [RFC-001 Addendum A: Scoping Policy and Reference County Assignments](rfc/0001-addendum-a-scoping-and-county-reference.md) — Draft
 
+## Data
+
+[`data/`](data/README.md) holds the machine-readable side of the RFCs: every county's default subregion, the local regions and their status, and a place-name lookup. Tools such as the [Region Configurator](https://michmesh.com/docs/MeshCore/Region-Configurator) read it directly, so this repository is the one place to change them.
+
+To propose a local region for your area, open a [local region issue](https://github.com/MichMesh/MC-Regional-Infrastructure-Planning/issues/new?template=local-region.yml). [data/README.md](data/README.md#adding-a-local-region) walks through the rest.
+
 ## Current draft hierarchy
 
 ```text

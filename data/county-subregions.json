@@ -1,8 +1,9 @@
 {
-  "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum B. Counties are a default reference, not borders; a repeater carries the regions of the coverage it actually serves.",
+  "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum A. Counties are a default reference, not borders; a repeater carries the regions of the coverage it actually serves.",
   "_source": "Nielsen DMA county assignments with the adjustments noted in the addendum.",
   "subregions": {
     "mi-west": {
+      "label": "West Michigan",
       "basis": "Grand Rapids–Kalamazoo–Battle Creek DMA plus the South Bend–Elkhart spillover counties (Berrien, Cass).",
       "counties": [
         {
@@ -72,6 +73,7 @@
       ]
     },
     "mi-central": {
+      "label": "Central Michigan",
       "basis": "Flint–Saginaw–Bay City DMA plus the Lansing DMA, plus Sanilac (Detroit DMA) so the Thumb is whole.",
       "counties": [
         {
@@ -153,6 +155,7 @@
       ]
     },
     "mi-east": {
+      "label": "Southeast Michigan",
       "basis": "Detroit DMA less Sanilac, plus the Toledo spillover county (Lenawee).",
       "counties": [
         {
@@ -194,6 +197,7 @@
       ]
     },
     "mi-north": {
+      "label": "Northern Lower Peninsula",
       "basis": "Traverse City–Cadillac DMA, Lower Peninsula counties only, plus the Alpena DMA.",
       "counties": [
         {
@@ -295,6 +299,7 @@
       ]
     },
     "mi-upper": {
+      "label": "Upper Peninsula",
       "basis": "Marquette DMA, the three Upper Peninsula counties Nielsen assigns to Traverse City (Chippewa, Luce, Mackinac), and the Green Bay (Menominee) and Duluth (Gogebic) spillovers.",
       "counties": [
         {

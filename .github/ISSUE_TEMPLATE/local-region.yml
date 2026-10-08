@@ -1,0 +1,66 @@
+name: Propose a local region
+description: Add a local region (like grr or azo) for an area under a Michigan subregion.
+title: "Local region: "
+labels: ["local region"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Local regions belong to the communities that use them (RFC-001). This form starts the conversation; nothing changes until the region is agreed and added to `data/local-regions.json`. See [data/README.md](https://github.com/MichMesh/MC-Regional-Infrastructure-Planning/blob/main/data/README.md#adding-a-local-region) for the whole process.
+  - type: input
+    id: tag
+    attributes:
+      label: Proposed tag
+      description: Short, lowercase letters, digits or hyphens. A plain place name, or an airport code only where one is already in use locally. No "#".
+      placeholder: mkg
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Area name
+      placeholder: Muskegon
+    validations:
+      required: true
+  - type: dropdown
+    id: subregion
+    attributes:
+      label: Subregion it sits under
+      options:
+        - mi-west (West Michigan)
+        - mi-central (Central Michigan)
+        - mi-east (Southeast Michigan)
+        - mi-north (Northern Lower Peninsula)
+        - mi-upper (Upper Peninsula)
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Coverage
+      description: The area the region is for, and the counties a repeater there would most likely be in. Coverage decides, not county lines.
+    validations:
+      required: true
+  - type: textarea
+    id: repeaters
+    attributes:
+      label: Repeaters that will carry it
+      description: Names or public key prefixes, and whether they're already on the air.
+    validations:
+      required: true
+  - type: textarea
+    id: operators
+    attributes:
+      label: Operators who agree
+      description: Who runs those repeaters and has agreed to the tag, and how to reach them (Discord, Signal, callsign, email).
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I've talked with operators in neighboring areas, so this doesn't overlap a region they already use.
+          required: true
+        - label: The tag isn't already in data/local-regions.json or the RFC-001 tree.
+          required: true

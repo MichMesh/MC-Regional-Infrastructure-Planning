@@ -1,9 +1,9 @@
 {
-  "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum B. Counties are a default reference, not borders; a repeater carries the regions of the coverage it actually serves.",
-  "_source": "Nielsen DMA county assignments with the adjustments noted in the addendum.",
+  "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum A. November 2026 proposed revision. Counties are default references, not fixed borders; a repeater carries the regions its actual RF coverage serves.",
+  "_source": "Nielsen DMA county assignments with proposed Northern Michigan Mesh alignment: Arenac, Gladwin, Isabella, Iosco, Ogemaw, Newaygo, and Oceana reassigned to mi-north. See RFC-001 Addendum A.",
   "subregions": {
     "mi-west": {
-      "basis": "Grand Rapids–Kalamazoo–Battle Creek DMA plus the South Bend–Elkhart spillover counties (Berrien, Cass).",
+      "basis": "Grand Rapids–Kalamazoo–Battle Creek DMA plus South Bend–Elkhart spillovers (Berrien, Cass), excluding Newaygo and Oceana (proposed CAD alignment under mi-north).",
       "counties": [
         {
           "fips": "26005",
@@ -50,14 +50,6 @@
           "name": "Muskegon"
         },
         {
-          "fips": "26123",
-          "name": "Newaygo"
-        },
-        {
-          "fips": "26127",
-          "name": "Oceana"
-        },
-        {
           "fips": "26139",
           "name": "Ottawa"
         },
@@ -72,12 +64,8 @@
       ]
     },
     "mi-central": {
-      "basis": "Flint–Saginaw–Bay City DMA plus the Lansing DMA, plus Sanilac (Detroit DMA) so the Thumb is whole.",
+      "basis": "Flint–Saginaw–Bay City and Lansing DMAs plus Sanilac (Thumb), excluding Arenac, Gladwin, Isabella, Iosco and Ogemaw (proposed northern local-region alignment).",
       "counties": [
-        {
-          "fips": "26011",
-          "name": "Arenac"
-        },
         {
           "fips": "26017",
           "name": "Bay"
@@ -93,10 +81,6 @@
         {
           "fips": "26049",
           "name": "Genesee"
-        },
-        {
-          "fips": "26051",
-          "name": "Gladwin"
         },
         {
           "fips": "26057",
@@ -115,24 +99,12 @@
           "name": "Ingham"
         },
         {
-          "fips": "26069",
-          "name": "Iosco"
-        },
-        {
-          "fips": "26073",
-          "name": "Isabella"
-        },
-        {
           "fips": "26075",
           "name": "Jackson"
         },
         {
           "fips": "26111",
           "name": "Midland"
-        },
-        {
-          "fips": "26129",
-          "name": "Ogemaw"
         },
         {
           "fips": "26145",
@@ -194,7 +166,7 @@
       ]
     },
     "mi-north": {
-      "basis": "Traverse City–Cadillac DMA, Lower Peninsula counties only, plus the Alpena DMA.",
+      "basis": "Traverse City–Cadillac and Alpena DMAs (Lower Peninsula only), plus Arenac, Gladwin, Isabella, Iosco, Ogemaw, Newaygo and Oceana, aligning Northern Michigan Mesh GDW, CAD, TVC and APN local regions under mi-north.",
       "counties": [
         {
           "fips": "26001",
@@ -207,6 +179,10 @@
         {
           "fips": "26009",
           "name": "Antrim"
+        },
+        {
+          "fips": "26011",
+          "name": "Arenac"
         },
         {
           "fips": "26019",
@@ -233,8 +209,20 @@
           "name": "Emmet"
         },
         {
+          "fips": "26051",
+          "name": "Gladwin"
+        },
+        {
           "fips": "26055",
           "name": "Grand Traverse"
+        },
+        {
+          "fips": "26069",
+          "name": "Iosco"
+        },
+        {
+          "fips": "26073",
+          "name": "Isabella"
         },
         {
           "fips": "26079",
@@ -267,6 +255,18 @@
         {
           "fips": "26119",
           "name": "Montmorency"
+        },
+        {
+          "fips": "26123",
+          "name": "Newaygo"
+        },
+        {
+          "fips": "26127",
+          "name": "Oceana"
+        },
+        {
+          "fips": "26129",
+          "name": "Ogemaw"
         },
         {
           "fips": "26133",
@@ -408,11 +408,11 @@
     },
     "26011": {
       "name": "Arenac",
-      "subregion": "mi-central",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-central"
+        "mi-north"
       ]
     },
     "26013": {
@@ -588,11 +588,11 @@
     },
     "26051": {
       "name": "Gladwin",
-      "subregion": "mi-central",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-central"
+        "mi-north"
       ]
     },
     "26053": {
@@ -669,11 +669,11 @@
     },
     "26069": {
       "name": "Iosco",
-      "subregion": "mi-central",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-central"
+        "mi-north"
       ]
     },
     "26071": {
@@ -687,11 +687,11 @@
     },
     "26073": {
       "name": "Isabella",
-      "subregion": "mi-central",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-central"
+        "mi-north"
       ]
     },
     "26075": {
@@ -912,11 +912,11 @@
     },
     "26123": {
       "name": "Newaygo",
-      "subregion": "mi-west",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-west"
+        "mi-north"
       ]
     },
     "26125": {
@@ -930,20 +930,20 @@
     },
     "26127": {
       "name": "Oceana",
-      "subregion": "mi-west",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-west"
+        "mi-north"
       ]
     },
     "26129": {
       "name": "Ogemaw",
-      "subregion": "mi-central",
+      "subregion": "mi-north",
       "path": [
         "midwest",
         "mi",
-        "mi-central"
+        "mi-north"
       ]
     },
     "26131": {

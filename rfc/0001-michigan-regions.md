@@ -45,9 +45,14 @@ midwest
 │   ├── mi-east
 │   │   └── det (example)
 │   ├── mi-north
-│   │   └── tvc (example)
+│   │   ├── gdw (proposed)
+│   │   ├── cad (proposed)
+│   │   ├── tvc (proposed)
+│   │   └── apn (proposed)
 │   └── mi-upper
-│       └── mqt (example)
+│       ├── ciu (proposed)
+│       ├── mqt (proposed)
+│       └── cmx (proposed)
 ├── il (example)
 ├── wi (example)
 └── in (example)
@@ -55,7 +60,12 @@ midwest
 
 Michigan subregion names use a parent-first `mi-` prefix so they remain recognizable, group together, and avoid collisions with similarly named regions elsewhere. In this draft, `mi-north` refers to the northern Lower Peninsula and `mi-upper` refers to the Upper Peninsula.
 
-The example local branches—`mkg` for the Muskegon area, `det` for the Detroit area, `tvc` for the Traverse City area, and `mqt` for the Marquette area—illustrate how city or metro scopes could nest beneath Michigan subregions. They do not establish final local definitions or hard geographic boundaries.
+The example local branches `mkg` (Muskegon) and `det` (Detroit) illustrate
+how city or metro scopes can nest beneath Michigan subregions. The
+`gdw`, `cad`, `tvc`, `apn`, `ciu`, `mqt`, and `cmx` branches are
+Northern Michigan Mesh **proposed local references**, not statewide
+adoptions or hard geographic boundaries. See RFC-001 Addendum A for
+the corresponding county reference and precedence rules.
 
 The `azo` branch is adopted by participating Kalamazoo-area repeater operators rather than listed only as an example.
 
@@ -137,6 +147,23 @@ The region is intended for traffic useful within the greater Grand Rapids area t
 The `azo` region is the local coordination domain for the Kalamazoo area. Participating Kalamazoo repeaters carry the full ancestry `midwest`, `mi`, `mi-west`, and `azo`, with each region configured separately.
 
 Like the other local regions in this RFC, `azo` has intentionally flexible edges. Its practical scope should follow useful local RF coverage and community relationships rather than a fixed municipal or county boundary.
+
+### Northern Michigan Mesh local references (proposed)
+
+The Northern Michigan Mesh county map groups the northern Lower Peninsula
+beneath `mi-north` (`gdw`, `cad`, `tvc`, `apn`) and the Upper Peninsula
+beneath `mi-upper` (`ciu`, `mqt`, `cmx`). The proposal keeps the
+Upper Peninsula as a separate parent scope for independent coordination
+and potential future subdivisions.
+
+For example, a repeater serving the Clare County area may explicitly
+carry `midwest`, `mi`, `mi-north`, and `gdw`; a repeater in the
+western Upper Peninsula may explicitly carry `midwest`, `mi`,
+`mi-upper`, and `cmx`. Region ancestry is not inherited automatically.
+
+Addendum A documents the complete proposed county mapping. The names and
+county groupings do not assign ownership, impose hard RF borders, or imply
+that every operator has agreed to adopt them.
 
 These descriptions communicate intended scope; they do not establish political or rigid RF borders.
 

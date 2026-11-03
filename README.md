@@ -7,7 +7,7 @@ The draft treats regions as RF propagation and community domains, not political 
 ## RFCs
 
 - [RFC-001: Michigan MeshCore Regions](rfc/0001-michigan-regions.md) — Draft
-- [RFC-001 Addendum A: Scoping Policy and Reference County Assignments](rfc/0001-addendum-a-scoping-and-county-reference.md) — Draft
+- [RFC-001 Addendum A: Scoping Policy and Reference County Assignments](rfc/0001-addendum-a-scoping-and-county-reference.md) — Draft; includes proposed Northern Michigan Mesh county alignment
 
 ## Current draft hierarchy
 
@@ -24,12 +24,24 @@ midwest
 │   ├── mi-east
 │   │   └── det (example)
 │   ├── mi-north
-│   │   └── tvc (example)
+│   │   ├── gdw (proposed)
+│   │   ├── cad (proposed)
+│   │   ├── tvc (proposed)
+│   │   └── apn (proposed)
 │   └── mi-upper
-│       └── mqt (example)
+│       ├── ciu (proposed)
+│       ├── mqt (proposed)
+│       └── cmx (proposed)
 ├── il (example)
 ├── wi (example)
 └── in (example)
 ```
 
 The city and neighboring-state examples illustrate how the model can scale; they do not establish hard boundaries or govern another community's regional structure.
+
+## County references
+
+- [Michigan parent subregions](data/county-subregions.json): all 83 counties; proposed November 2026 alignment moves seven counties to `mi-north` while leaving `mi-upper` unchanged.
+- [Northern Michigan Mesh proposed local regions](data/county-local-regions.json): 46 counties organized under `gdw`, `cad`, `tvc`, `apn`, `ciu`, `mqt`, and `cmx`.
+
+County assignments are planning references, **not RF coverage boundaries or mandatory repeater configurations**. The proposal does not imply adoption by other operators.

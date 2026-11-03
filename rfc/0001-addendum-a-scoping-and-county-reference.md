@@ -258,32 +258,57 @@ MeshCore allows many carried regions. This part takes no position on
 whether an edge site should; that is the operator's call, informed by what
 traffic the site actually hears.
 
-## Basis: broadcast markets
+## Basis: community geography and practical RF coverage
 
-The reference uses Nielsen's Designated Market Areas — the county groupings
-that describe where each Michigan television market's transmitters reach —
-as its starting point. They were chosen over administrative schemes (state
-prosperity regions, congressional districts, MDOT regions) because they are
-the only widely published Michigan county grouping that is derived from RF
-propagation rather than from politics or economics. A DMA is, roughly, the
-set of counties that can see the same tower. That is close to what a MeshCore
-subregion is trying to describe.
+Nielsen Designated Market Areas (DMAs) were used as an initial,
+county-complete reference in the September 2026 draft, but they should not
+be mistaken for an RF propagation model. Nielsen assigns counties to
+non-overlapping television markets based on predominant viewing behavior;
+DMAs support audience measurement, advertising and distribution rather
+than mapping where a particular transmitter's signal can be received.
+A county may receive broadcasts associated with more than one market
+while still belonging to just one DMA.
 
-Michigan is covered by seven in-state markets (Detroit; Grand Rapids–
-Kalamazoo–Battle Creek; Flint–Saginaw–Bay City; Lansing; Traverse City–
-Cadillac; Marquette; Alpena) and four spillovers from neighboring markets
-(South Bend–Elkhart, Toledo, Green Bay–Appleton, Duluth–Superior). Together
-they assign every county exactly once.
+The original draft grouped Michigan's television markets into five
+subregions. That method was a convenient starting point for a complete
+county table, **not technical evidence** that the resulting boundaries
+match MeshCore repeater coverage or the ways neighboring communities
+communicate. Television audience habits also need not represent current
+community relationships or regional traffic patterns. Even measured
+television reception does not directly predict MeshCore coverage:
+frequency, equipment, terrain, antenna locations, and link budgets differ.
 
-The markets were then mapped onto RFC-001's five subregions with the
-adjustments listed under each. The November 2026 proposal further
-reassigns seven counties: Arenac, Gladwin, Isabella, Iosco, and Ogemaw
-from `mi-central`, and Newaygo and Oceana from `mi-west`, to `mi-north`.
-This keeps the proposed northern Lower Peninsula local regions within
-one parent `mi-north` scope, rather than splitting their counties across
-multiple parent subregions. `mi-upper` remains separate and unchanged,
-preserving a distinct Upper Peninsula scope that can support further
-local development or future reorganization.
+The proposed Northern Michigan Mesh revision uses a different basis for
+the northern portion of the state:
+
+1. **Coherent local areas.** Keep the locally proposed `gdw`, `cad`,
+   `tvc`, and `apn` county groupings under the same `mi-north`
+   parent, and `ciu`, `mqt`, and `cmx` under `mi-upper`.
+2. **Community interaction.** Use reasonable local communication,
+   travel, and service relationships as inputs when choosing a convenient
+   default county grouping. These are qualitative planning judgments,
+   not a measured traffic study.
+3. **Observed RF connectivity.** Where available, use actual MeshCore
+   repeater footprints, links, propagation observations, and operator
+   experience to evaluate or adjust the reference.
+4. **Flexible edges.** Keep the county table as one suggested starting
+   point, not an enforced border; operators may choose neighboring
+   regions when they serve them in practice.
+
+For example, reception reports from the proposed `gdw` area include
+television stations associated with Cadillac, Saginaw, and sometimes
+Flint. That overlap illustrates why a single-market county label cannot
+be equated with an RF boundary. It does **not** establish a MeshCore
+radio footprint by itself.
+
+The November 2026 proposal reassigns seven counties: Arenac,
+Gladwin, Isabella, Iosco, and Ogemaw from `mi-central`, and
+Newaygo and Oceana from `mi-west`, into `mi-north`. That produces a
+coherent proposed northern Lower Peninsula parent for the four local
+regions. The 15 Upper Peninsula counties remain in `mi-upper`, preserving
+their distinct regional scope and room for future local development.
+The remainder of the state retains the previously published reference
+for now, without treating the DMA-based origin as a technical endorsement.
 
 ## Reference assignments
 
@@ -533,14 +558,19 @@ hops, so `flood.max.unscoped 3` matters most there.
 - MeshCore 1.16.0 release notes: https://blog.meshcore.io/2026/06/06/release-1-16-0
 - `flood.max.unscoped` implementation: https://github.com/meshcore-dev/MeshCore/pull/2661
 - Pacific Northwest region rollout: https://gessaman.com/meshcore/regions/rollout/
-- Nielsen DMA county assignments (via michiguide.com/tvmarkets and ustvdb.com)
+- Nielsen DMA definition and purpose: https://www.nielsen.com/insights/2025/what-is-a-dma-and-why-does-it-matter/
+- Nielsen DMA county assignments were the original draft's starting point
+  (via michiguide.com/tvmarkets and ustvdb.com); they are not a MeshCore
+  propagation or link-coverage reference
 
 ## Change history
 
 - 2026-11 — Proposed Northern Michigan Mesh alignment. Moved Arenac,
   Gladwin, Isabella, Iosco, Ogemaw, Newaygo, and Oceana into `mi-north`,
   left `mi-upper` intact, and documented seven proposed local-region
-  county references. This is a draft for review, not statewide adoption.
+  county references. Clarified that Nielsen DMAs describe TV viewing
+  markets, not RF propagation boundaries. This is a draft for review,
+  not statewide adoption.
 - 2026-09 — Initial draft. Combines the August unscoped-traffic proposal
   (updated: cap of 3 on every repeater, tall sites first, sparse-area
   carve-out) with the county reference assignments and boundary guidance.

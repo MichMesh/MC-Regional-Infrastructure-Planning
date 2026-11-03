@@ -333,9 +333,10 @@ reassigned to `mi-north` under this proposal.
 *Adjustments:* Berrien and Cass are placed here rather than in any Indiana
 region. A repeater there that mostly serves Indiana traffic is exactly the
 cross-border case RFC-001 leaves to the operator; the reference gives it a
-Michigan home by default. Newaygo and Oceana move from `mi-west` to
-`mi-north` so the proposed `cad` local region is not split across parent
-subregions.
+Michigan home by default. Newaygo and Oceana are **provisionally** placed
+in `mi-north` so the proposed `cad` local region is not split across
+parent subregions. Their placement is specifically open for discussion
+with operators in both the Grand Rapids and Cadillac areas.
 
 Local regions currently adopted beneath `mi-west`: `grr`, `azo`. RFC-001's
 example `mkg` (Muskegon) would also nest here.
@@ -381,6 +382,21 @@ the Straits are a meaningful RF division. Alpena's market is folded into
 `mi-north`. Arenac, Gladwin, Isabella, Iosco, Ogemaw, Newaygo, and Oceana
 also move into `mi-north`, allowing the proposed `gdw`, `cad`, `tvc`, and
 `apn` county groupings to remain entirely within `mi-north`.
+
+**Newaygo and Oceana: boundary discussion.** These two counties lie in
+a transition area between the Grand Rapids and Cadillac communities, and
+their inclusion under `mi-north` is intentionally provisional. In the
+MeshMapper regional depiction reviewed when preparing this proposal,
+Oceana was not included in `grr`, while only roughly the southern quarter
+of Newaygo was depicted within `grr`. That provided a practical reason
+to use `mi-north` / `cad` as the initial reference for both counties;
+it is not an assertion that MeshMapper defines authoritative borders or
+that coverage elsewhere in either county is absent. Input from local
+operators and residents, actual MeshCore link observations, and regional
+communication patterns could justify keeping these assignments,
+adjusting a county's reference, or documenting cross-region repeaters.
+**Neither county is being claimed as exclusively northern; both
+assignments remain open to collaborative revision.**
 
 Local regions: `gdw` (Gladwin / Clare), `cad` (Cadillac and adjacent
 west-central counties), `tvc` (Traverse City area), and `apn`
@@ -541,6 +557,12 @@ hops, so `flood.max.unscoped 3` matters most there.
 - Whether the Thumb should be a local region under `mi-central` (per
   RFC-001) or a subregion; this addendum follows RFC-001.
 - The name `mi-east` for Southeast Michigan.
+- **Newaygo and Oceana county references:** both are proposed under
+  `mi-north` / `cad` but lie between Grand Rapids and Cadillac.
+  Discussion with operators serving those counties is invited before
+  treating either reference as settled. MeshMapper's observed `grr`
+  depiction informed the initial choice, but is not a substitute for
+  RF coverage measurements or community agreement.
 - Review and adoption, if desired, of the proposed Northern Michigan Mesh
   `gdw`, `cad`, `tvc`, `apn`, `ciu`, `mqt`, and `cmx` local regions by
   independently operated repeaters. County references do not replace
@@ -569,8 +591,10 @@ hops, so `flood.max.unscoped 3` matters most there.
   Gladwin, Isabella, Iosco, Ogemaw, Newaygo, and Oceana into `mi-north`,
   left `mi-upper` intact, and documented seven proposed local-region
   county references. Clarified that Nielsen DMAs describe TV viewing
-  markets, not RF propagation boundaries. This is a draft for review,
-  not statewide adoption.
+  markets, not RF propagation boundaries. Documented the provisional
+  placement of Newaygo and Oceana and invited Grand Rapids / Cadillac
+  area operator feedback. This is a draft for review, not statewide
+  adoption.
 - 2026-09 — Initial draft. Combines the August unscoped-traffic proposal
   (updated: cap of 3 on every repeater, tall sites first, sparse-area
   carve-out) with the county reference assignments and boundary guidance.

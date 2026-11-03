@@ -1,6 +1,6 @@
 {
   "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum A. November 2026 proposed revision. Counties are default references, not fixed borders; a repeater carries the regions its actual RF coverage serves.",
-  "_source": "Nielsen DMA county assignments with proposed Northern Michigan Mesh alignment: Arenac, Gladwin, Isabella, Iosco, Ogemaw, Newaygo, and Oceana reassigned to mi-north. See RFC-001 Addendum A.",
+  "_source": "Originally derived from Nielsen DMA county market assignments, which describe predominant TV viewing rather than RF coverage. November 2026 Northern Michigan Mesh proposal moves seven counties to mi-north using locally proposed community-region groupings; see RFC-001 Addendum A.",
   "subregions": {
     "mi-west": {
       "basis": "Grand Rapids–Kalamazoo–Battle Creek DMA plus South Bend–Elkhart spillovers (Berrien, Cass), excluding Newaygo and Oceana (proposed CAD alignment under mi-north).",
